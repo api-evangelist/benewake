@@ -1,23 +1,65 @@
 aid: benewake
+
 name: Benewake
-description: 'Benewake is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Benewake develops high‑performance LiDAR sensors for autonomous driving, robotics, UAVs, and smart transportation. Based in Beijing, the company offers a wide range of short‑, medium‑, long‑distance and underwater LiDAR modules, serving global markets with over 300 patents and partnerships in more than 90 countries.'
+
 url: https://raw.githubusercontent.com/api-evangelist/benewake/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- LiDAR
+- Sensors
+- Autonomous Vehicles
+- Robotics
+- UAV
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Support
+  url: https://en.benewake.com/support/index.html
+- type: Hosts
+  url: hosts/benewake-hosts.yml
+- type: Documentation
+  url: https://dev.benewake.com/
+- type: DomainSecurity
+  url: security/benewake-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/benewake
+  url: https://en.benewake.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://equityzen.com/company/benewake
+    status: 403
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
